@@ -1,0 +1,23 @@
+require 'pry'
+
+def palindrome?(word)
+  new_array = word.split("")
+  counter = 0
+  until counter = new_array.length
+    if new_array[counter] == new_array[0 - 1 - counter]
+      counter += 1
+    else
+      false
+    end
+  end
+
+
+end
+
+binding.pry
+palindrome?("end")
+
+def palindrome?(str)
+  if str.length <= 1
+    true
+  elsif str[-1]
